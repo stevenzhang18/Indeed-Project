@@ -1,0 +1,31 @@
+application: indeed-1349
+version: python-06212016
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /css
+  static_dir: css
+
+
+- url: /img
+  static_dir: img
+
+- url: /js
+  static_dir: js
+
+- url: /font-awesome
+  static_dir: font-awesome
+- url: /bootstrap
+  static_dir: bootstrap
+
+- url: /.*
+  script: main.app
+
+libraries:
+- name: webapp2
+  version: latest
+
+- name: jinja2
+  version: latest
